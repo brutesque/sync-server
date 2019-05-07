@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+
+  resilio_sync:
+    image: resilio/sync:release-2.6.2
+    restart: unless-stopped
+    ports:
+      - "55555:55555"
+    volumes:
+      - /mnt/storage/sync:/mnt/sync
+      - ./config/sync/sync.conf:/mnt/sync/sync.conf
+    networks:
+      - nginx_network
+
+  nginx:
+    image: nginx:1.15-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./config/nginx/development:/etc/nginx/conf.d
+    depends_on:
+      - resilio_sync
+    networks:
+      - nginx_network
+
+networks:
+  nginx_network:
+    driver: bridge
