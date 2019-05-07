@@ -1,2 +1,2 @@
 # sync-server
-Resilio Sync Server with Nginx and Let's Encrypt
+Docker Compose for remote backup server using Resilio Sync, Nginx and Let's Encrypt
