@@ -14,6 +14,7 @@ Install Ubuntu on a VPS. Login into the shell and type:
 $ cd sync-server
 ```
 
+
 Configure the host
 ```bash
 $ bash scripts/install-docker.sh
@@ -24,6 +25,7 @@ for hardening.
 - Configures firewall to block all incoming traffic, except for ssh, webgui and sync
 - Install fail2ban
 
+
 Configure the backup disk. Make sure the disk is mounted as /mnt/storage.
 
 When using transip.nl you can use the following script:
@@ -31,16 +33,19 @@ When using transip.nl you can use the following script:
 $ bash scripts/mount-transip-bigstorage.sh
 ```
 
+
 Make sure the following path exists after mounting:
 ```bash
 $ mkdir -p /mnt/storage/sync
 ```
 This will be resilio sync backup and cache folder.
 
+
 Install Docker
 ```bash
 $ bash scripts/install-docker.sh
 ```
+
 
 ## Deploy
 
