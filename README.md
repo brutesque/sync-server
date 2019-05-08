@@ -46,5 +46,5 @@ $ bash scripts/install-docker.sh
 
 Run the deploy script
 ```bash
-$ bash deploy.sh
+$ bash deploy.sh [staging | production] <domain1 domain2 ...>
 ```
