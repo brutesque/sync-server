@@ -11,9 +11,9 @@ die () {
 domains=(${@:2})
 
 
-bash scripts/host-setup.sh
-bash scripts/mount-transip-bigstorage.sh
-bash scripts/install-docker.sh
+#bash scripts/host-setup.sh
+#bash scripts/mount-transip-bigstorage.sh
+#bash scripts/install-docker.sh
 bash scripts/create-dummy-certificates.sh "${@:2}"
 
 for domain in "${domains[@]}"; do
