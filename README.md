@@ -28,7 +28,7 @@ for hardening.
 
 Configure the backup disk. Make sure the disk is mounted as /mnt/storage.
 
-When using BigStorage at transip.nl you can use the following script:
+When using [BigStorage at transip.nl](https://www.transip.nl/vps/big-storage/) you can use the following script:
 ```bash
 $ bash scripts/mount-transip-bigstorage.sh
 ```
