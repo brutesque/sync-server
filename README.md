@@ -53,3 +53,6 @@ Run the deploy script
 ```bash
 $ bash deploy.sh [staging | production] <domain1 domain2 ...>
 ```
+
+Let's Encrypt certificates will be generated during this process, so make sure to use the 'staging' parameter during testing.
+Certificates will be generated for all the supplied domains.
